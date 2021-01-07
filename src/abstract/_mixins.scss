@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500&display=swap');
+
+@mixin commonStyles {
+	@media (min-width: 1125px) {
+		width: 50%;
+	}
+	.grid-container {
+		@media (min-width: 414px) {
+			height: 75vh;
+		}
+		color: darkgray;
+		// transform: rotate(-3deg);
+
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(5, 1fr);
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+	}
+	.grid-item {
+		background-color: white;
+		border: 1px solid gray;
+		padding: 5px;
+		position: relative;
+		/* TODO: Hacer un miixng de esto*/
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		.button {
+			&:active,
+			&:focus {
+				outline: none;
+			}
+			&.matched {
+				height: 100%;
+				text-decoration: line-through;
+				color: lightgray;
+				.circle-overlay {
+					width: 100%;
+					height: 100%;
+					transform: scale(5);
+					background-color: lightgray;
+					transition: all 0.5s ease-in-out;
+					opacity: 0.5;
+				}
+			}
+			@media (min-width: 300px) {
+				font-size: 10px;
+			}
+			@media (min-width: 500px) {
+				font-size: 12px;
+			}
+			@media (min-width: 1024px) {
+				font-size: 18px;
+			}
+			background-color: transparent;
+			font-size: 8px;
+			font-family: 'Barlow', sans-serif;
+			font-weight: 400;
+			border: none;
+			cursor: pointer;
+			.circle-overlay {
+				transition: all 0.5s ease;
+				position: absolute;
+				transform: scale(0.01);
+				border-radius: 50%;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.center {
+			border: 1px solid blueviolet;
+			background-color: blueviolet;
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+			/* TODO: Hacer un miixng de esto*/
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}

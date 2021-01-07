@@ -1,0 +1,83 @@
+@import '../abstract/mixins';
+
+#main {
+	/* TODO: Hacer un miixng de esto*/
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	padding: 0 10%;
+}
+
+.main-container {
+	&.normal {
+		@include commonStyles;
+	}
+	&.dark {
+		@include commonStyles;
+	}
+	&.unicorn {
+		@include commonStyles;
+	}
+}
+
+.main-title {
+	margin: 10px 0;
+	position: absolute;
+	left: 15%;
+	top: 5%;
+	&.dark {
+		color: white;
+	}
+}
+
+.display {
+	display: inline;
+	.random {
+		position: absolute;
+		z-index: 1;
+		animation-name: grow;
+		animation-iteration-count: 2;
+		animation-timing-function: linear;
+	}
+	#square {
+		width: 20px;
+		height: 20px;
+		background: red;
+	}
+	#circle {
+		width: 20px;
+		height: 20px;
+		background: purple;
+		border-radius: 50%;
+	}
+
+	#triangle-up {
+		width: 0;
+		height: 0;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-bottom: 100px solid green;
+	}
+
+	#parallelogram {
+		width: 20px;
+		height: 20px;
+		transform: skew(20deg);
+		background: blue;
+	}
+}
+
+@keyframes grow {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import BingoState from './context/BingoState';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import DarkHome from './pages/DarkHome';
+import UnicornHome from './pages/UnicornHome';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Router>
+			<BingoState>
+				<div className='App'>
+					<Switch>
+						<Route exact path='/'>
+							<Home linkTo='/darkBingo' />
+						</Route>
+						<Route exact path='/darkBingo'>
+							<DarkHome linkTo='/unicornBingo' />
+						</Route>
+						<Route exact path='/unicornBingo'>
+							<UnicornHome linkTo='/' />
+						</Route>
+					</Switch>
+				</div>
+			</BingoState>
+		</Router>
+	);
 }
 
 export default App;
