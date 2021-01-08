@@ -18,7 +18,6 @@ export default function Home({ linkTo }) {
 		>
 			{' '}
 			<Winner isWinner={isWinner} />
-			<h1 className='main-title '>Bingo!</h1>
 			<div className='main-container normal'>
 				<Grid linkTo={linkTo} render={render} setRender={setRender} />
 			</div>

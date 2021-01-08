@@ -1,3 +1,39 @@
+// Phrases
+const cellTexts = [
+	'(child noises in the background)',
+	'Hello, hello?',
+	'i need to jump in another call',
+	'can everyone go on mute?',
+	'could you please get closer to the mic?',
+	'(load painful echo/feedback)',
+	'Next slide, please',
+	'can we take this offline?',
+	'is _____ on the call?',
+	'Could you share this slides afterwards?',
+	'can somebody grant presenter rights?',
+	'can you email that to everyone?',
+	'Sorry I had problems loging in',
+	'(animal noises in the background)',
+	"Sorry, i didn't found the conference id",
+	'I was having connection issues',
+	"I'll have to get back to you",
+	'who just joined?',
+	'sorry, something _____ with my calendar',
+	'Do you see my screen?',
+	"let's wait for _____ !",
+	'You will send the minutes?',
+	'sorry, i was on mute',
+	'can you repeat please?',
+];
+
+// Order of the phrases randomly generated
+let arr = [];
+while (arr.length < 24) {
+	let r = Math.floor(Math.random() * 24);
+	if (arr.indexOf(r) === -1) arr.push(r);
+}
+console.log(arr);
+
 // Bingo card
 export const card = [
 	{
@@ -6,7 +42,7 @@ export const card = [
 		col: '0',
 		isCenter: false,
 		matched: false,
-		cellText: '(child noises in the background)',
+		cellText: cellTexts[arr[0]],
 	},
 	{
 		id: '01',
@@ -14,7 +50,7 @@ export const card = [
 		col: '1',
 		isCenter: false,
 		matched: false,
-		cellText: 'Hello, hello?',
+		cellText: cellTexts[arr[1]],
 	},
 	{
 		id: '02',
@@ -22,7 +58,7 @@ export const card = [
 		col: '2',
 		isCenter: false,
 		matched: false,
-		cellText: 'i need to jump in another call',
+		cellText: cellTexts[arr[2]],
 	},
 	{
 		id: '03',
@@ -30,7 +66,7 @@ export const card = [
 		col: '3',
 		isCenter: false,
 		matched: false,
-		cellText: 'can everyone go on mute?',
+		cellText: cellTexts[arr[3]],
 	},
 	{
 		id: '04',
@@ -38,7 +74,7 @@ export const card = [
 		col: '4',
 		isCenter: false,
 		matched: false,
-		cellText: 'could you please get closer to the mic?',
+		cellText: cellTexts[arr[4]],
 	},
 	{
 		id: '10',
@@ -46,7 +82,7 @@ export const card = [
 		col: '0',
 		isCenter: false,
 		matched: false,
-		cellText: '(load painful echo/feedback)',
+		cellText: cellTexts[arr[5]],
 	},
 	{
 		id: '11',
@@ -54,7 +90,7 @@ export const card = [
 		col: '1',
 		isCenter: false,
 		matched: false,
-		cellText: 'Next slide, please',
+		cellText: cellTexts[arr[6]],
 	},
 	{
 		id: '12',
@@ -62,7 +98,7 @@ export const card = [
 		col: '2',
 		isCenter: false,
 		matched: false,
-		cellText: 'can we take this offline?',
+		cellText: cellTexts[arr[7]],
 	},
 	{
 		id: '13',
@@ -70,7 +106,7 @@ export const card = [
 		col: '3',
 		isCenter: false,
 		matched: false,
-		cellText: 'is _____ on the call?',
+		cellText: cellTexts[arr[8]],
 	},
 	{
 		id: '14',
@@ -78,7 +114,7 @@ export const card = [
 		col: '4',
 		isCenter: false,
 		matched: false,
-		cellText: 'Could you share this slides afterwards?',
+		cellText: cellTexts[arr[9]],
 	},
 	{
 		id: '20',
@@ -86,7 +122,7 @@ export const card = [
 		col: '0',
 		isCenter: false,
 		matched: false,
-		cellText: 'can somebody grant presenter rights?',
+		cellText: cellTexts[arr[10]],
 	},
 	{
 		id: '21',
@@ -94,7 +130,7 @@ export const card = [
 		col: '1',
 		isCenter: false,
 		matched: false,
-		cellText: 'can you email that to everyone?',
+		cellText: cellTexts[arr[11]],
 	},
 	{
 		id: '22',
@@ -110,7 +146,7 @@ export const card = [
 		col: '3',
 		isCenter: false,
 		matched: false,
-		cellText: 'Sorry I had problems loging in',
+		cellText: cellTexts[arr[12]],
 	},
 	{
 		id: '24',
@@ -118,7 +154,7 @@ export const card = [
 		col: '4',
 		isCenter: false,
 		matched: false,
-		cellText: '(animal noises in the background)',
+		cellText: cellTexts[arr[13]],
 	},
 	{
 		id: '30',
@@ -126,7 +162,7 @@ export const card = [
 		col: '0',
 		isCenter: false,
 		matched: false,
-		cellText: "Sorry, i didn't found the conference id",
+		cellText: cellTexts[arr[14]],
 	},
 	{
 		id: '31',
@@ -134,7 +170,7 @@ export const card = [
 		col: '1',
 		isCenter: false,
 		matched: false,
-		cellText: 'I was having connection issues',
+		cellText: cellTexts[arr[15]],
 	},
 	{
 		id: '32',
@@ -142,7 +178,7 @@ export const card = [
 		col: '2',
 		isCenter: false,
 		matched: false,
-		cellText: "I'll have to get back to you",
+		cellText: cellTexts[arr[16]],
 	},
 	{
 		id: '33',
@@ -150,7 +186,7 @@ export const card = [
 		col: '3',
 		isCenter: false,
 		matched: false,
-		cellText: 'who just joined?',
+		cellText: cellTexts[arr[17]],
 	},
 	{
 		id: '34',
@@ -158,7 +194,7 @@ export const card = [
 		col: '4',
 		isCenter: false,
 		matched: false,
-		cellText: 'sorry, something _____ with my calendar',
+		cellText: cellTexts[arr[18]],
 	},
 	{
 		id: '40',
@@ -166,7 +202,7 @@ export const card = [
 		col: '0',
 		isCenter: false,
 		matched: false,
-		cellText: 'Do you see my screen?',
+		cellText: cellTexts[arr[19]],
 	},
 	{
 		id: '41',
@@ -174,7 +210,7 @@ export const card = [
 		col: '1',
 		isCenter: false,
 		matched: false,
-		cellText: "let's wait for _____ !",
+		cellText: cellTexts[arr[20]],
 	},
 	{
 		id: '42',
@@ -182,7 +218,7 @@ export const card = [
 		col: '2',
 		isCenter: false,
 		matched: false,
-		cellText: 'You will send the minutes?',
+		cellText: cellTexts[arr[21]],
 	},
 	{
 		id: '43',
@@ -190,7 +226,7 @@ export const card = [
 		col: '3',
 		isCenter: false,
 		matched: false,
-		cellText: 'sorry, i was on mute',
+		cellText: cellTexts[arr[22]],
 	},
 	{
 		id: '44',
@@ -198,7 +234,7 @@ export const card = [
 		col: '4',
 		isCenter: false,
 		matched: false,
-		cellText: 'can you repeat please?',
+		cellText: cellTexts[arr[23]],
 	},
 ];
 
