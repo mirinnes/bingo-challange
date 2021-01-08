@@ -5,8 +5,7 @@ export default function Winner({ isWinner }) {
 		return Math.floor(Math.random() * (max - min) + min);
 	}
 	function getRandomColor() {
-		let randomColor;
-		return (randomColor = '#' + (((1 << 24) * Math.random()) | 0).toString(16));
+		return '#' + (((1 << 24) * Math.random()) | 0).toString(16);
 	}
 	const screenX = 1400;
 	const screenY = 650;

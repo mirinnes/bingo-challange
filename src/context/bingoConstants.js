@@ -26,13 +26,12 @@ const cellTexts = [
 	'can you repeat please?',
 ];
 
-// Order of the phrases randomly generated
+// Index order array randomly generated
 let arr = [];
 while (arr.length < 24) {
 	let r = Math.floor(Math.random() * 24);
 	if (arr.indexOf(r) === -1) arr.push(r);
 }
-console.log(arr);
 
 // Bingo card
 export const card = [
